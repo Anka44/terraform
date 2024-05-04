@@ -71,40 +71,42 @@ resource "aws_launch_template" "my_launch_template" {
 
 # Create Auto Scaling Group
 resource "aws_autoscaling_group" "my_asg" {
-  // Define your auto scaling group configuration here
+  min_size = 1
+  max_size = 3
+  # Define your auto scaling group configuration here
 }
 
 # Create Target Group
 resource "aws_lb_target_group" "my_target_group" {
-  // Define your target group configuration here
+  # Define your target group configuration here
 }
 
 # Create Application Load Balancer
 resource "aws_lb" "my_alb" {
-  // Define your ALB configuration here
+  # Define your ALB configuration here
 }
 
 # Create IAM Role
 resource "aws_iam_role" "my_role" {
-  // Define your IAM role configuration here
+  # Define your IAM role configuration here
 }
 
 # Attach Policy to IAM Role
 resource "aws_iam_role_policy_attachment" "my_policy_attachment" {
-  // Attach your policy to the IAM role here
+  # Attach your policy to the IAM role here
 }
 
 # Create RDS Subnet Group
 resource "aws_db_subnet_group" "my_db_subnet_group" {
-  // Define your RDS subnet group configuration here
+  # Define your RDS subnet group configuration here
 }
 
 # Create RDS Instance
 resource "aws_db_instance" "my_db_instance" {
-  // Define your RDS instance configuration here
+  # Define your RDS instance configuration here
 }
 
 # Create S3 Bucket
 resource "aws_s3_bucket" "my_s3_bucket" {
-  // Define your S3 bucket configuration here
+  # Define your S3 bucket configuration here
 }
