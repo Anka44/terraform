@@ -1,9 +1,7 @@
-output "vpc_id" {
-  value = aws_vpc.my_vpc.id
+output "app_server_ip" {
+  value = aws_instance.app_server.public_ip
 }
 
-output "public_subnet_ids" {
-  value = [aws_subnet.public_subnet1.id, aws_subnet.public_subnet2.id]
+output "app_server_id" {
+  value = aws_instance.app_server.id
 }
-
-# Define other outputs as needed...

@@ -1,17 +1,39 @@
-variable "aws_region" {
-  description = "The AWS region where resources will be created"
-  default     = "your_aws_region"
+variable "ami_id" {
+  type    = string
+  default = "ami-086f060214da77a16"
 }
 
-variable "availability_zones" {
-  description = "List of availability zones to use"
-  type        = list(string)
-  default     = ["your_az1", "your_az2"]
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
 }
 
-variable "vpc_cidr_block" {
-  description = "CIDR block for the VPC"
-  default     = "10.0.0.0/16"
+variable "region_name" {
+  type    = string
+  default = "us-west-2"
 }
 
-# Define other variables as needed...
+variable "vpc_cidr" {
+  type    = string
+  default = "10.20.0.0/16"
+}
+
+variable "subnet_cidr" {
+  type    = string
+  default = "10.20.0.0/24"
+}
+
+variable "subnet2_cidr" {
+  type    = string
+  default = "10.20.1.0/24"
+}
+
+variable "az1" {
+  type    = string
+  default = "us-west-2a"
+}
+
+variable "az2" {
+  type    = string
+  default = "us-west-2b"
+}
